@@ -1,14 +1,12 @@
 import * as React from "react"
+import Full from "../layouts/basic"
 
-import Layout from "../components/layout"
-import Seo from "../components/seo"
-
-const NotFoundPage = () => (
-  <Layout>
-    <Seo title="404: Not found" />
-    <h1>404: Not Found</h1>
-    <p>You just hit a route that doesn&#39;t exist... the sadness.</p>
-  </Layout>
-)
-
-export default NotFoundPage
+export default function NotFoundPage () {
+  return (
+    <Full>
+    <div className="box has-background-info">
+      You've found the 404 page. You trying to get somewhere you're not allowed, choom?
+    </div>
+    </Full>
+  )
+}
