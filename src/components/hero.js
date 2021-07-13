@@ -8,13 +8,12 @@ export default function Hero() {
         site {
           siteMetadata {
             title
-            display
             description
           }
         }
       }      
     `)
-    const { display, title, description } = data.site.siteMetadata
+    const { title, description } = data.site.siteMetadata
 
     return (
         <section className="hero is-primary">
@@ -23,7 +22,7 @@ export default function Hero() {
             </div>
             <div className="hero-body has-text-centered">
                 <div className="container is-lower-case">
-                    <h1 className="title is-1">{display}</h1>
+                    <h1 className="title is-1">{title}</h1>
                     <h3 className="subtitle is-5">{description}</h3>
                 </div>
             </div>

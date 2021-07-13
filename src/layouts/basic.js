@@ -1,5 +1,5 @@
 import React from "react"
-
+import "../styles/global.scss"
 import Nav from "../components/nav"
 
 export default function Full({ children }) {
