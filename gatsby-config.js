@@ -3,7 +3,13 @@ module.exports = {
     title: `Victoria Tilley`,
     display: "<//Sapphyre>",
     author: `Victoria Tilley`,
-    description: `My personal website full of cyberpunk madness.`
+    description: `My personal website full of dumbness and fun.`,
+    social: {
+      twitter: `ssapphyree`,
+      instagram: `ssapphyree`,
+      github: `sapphyree`,
+      email: `victoriartilley@gmail.com`,
+    },
   },
   plugins: [
     `gatsby-plugin-image`,
@@ -22,7 +28,7 @@ module.exports = {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `blog`,
-        path: `${__dirname}/content/`,
+        path: `${__dirname}/content/posts`,
       }
     },
   ],

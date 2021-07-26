@@ -3,7 +3,7 @@ import { graphql } from "gatsby"
 import Full from "../layouts/basic"
 
 export default function BlogPost({ data }) {
-    const post = data.markdownRemark
+  const post = data.markdownRemark
   return (
     <Full>
       <div className="columns">

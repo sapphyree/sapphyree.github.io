@@ -7,13 +7,13 @@ export default function Hero() {
     query {
         site {
           siteMetadata {
-            title
+            author
             description
           }
         }
       }      
     `)
-    const { title, description } = data.site.siteMetadata
+    const { author, description } = data.site.siteMetadata
 
     return (
         <section className="hero is-primary">
@@ -21,8 +21,8 @@ export default function Hero() {
                 <Nav />
             </div>
             <div className="hero-body has-text-centered">
-                <div className="container is-lower-case">
-                    <h1 className="title is-1">{title}</h1>
+                <div className="container">
+                    <h1 className="title is-size-1">{author}</h1>
                     <h3 className="subtitle is-5">{description}</h3>
                 </div>
             </div>
