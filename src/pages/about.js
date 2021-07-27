@@ -11,7 +11,7 @@ export default function AboutPage () {
           <div className="block">Heya! I'm Victoria - I go by "Sapphyre" or some derivation of that on most places on the internet.</div>
           <div className="block">I'm a 19 year old Computer Science student and software engineer-cross-game designer from the United Kingdom interested in fullstack development,
             computer graphics, game engines, and all other things tech and computers.</div>
-          <div className="block">I really like programming, climbing, longboarding and getting into all sorts of trouble in videogames.</div>
+          <div className="block">I really like programming, climbing, longboarding and getting into all sorts of trouble in videogames. Oh, and I love glowing things!</div>
         </div>
       </section>
       <section className="section">
