@@ -9,7 +9,7 @@ export default function AboutPage () {
         <h1 className="title has-text-white"><span className="glowPink">About</span></h1>
         <p>This website was made by me through utilisation of Gatsby, Bulma and Github Pages.</p>
       </div>
-      <section className="section is-large"></section>
+      
     </Full>
   )
 }

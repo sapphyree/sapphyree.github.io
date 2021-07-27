@@ -7,8 +7,7 @@ export default function Full({ children }) {
   return (
     <Layout>
       <Section>{children}</Section>
-      <Footer />
-    </Layout>
+    </Layout> 
   )
 }
 
