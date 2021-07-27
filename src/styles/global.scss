@@ -4,38 +4,42 @@
 @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono&display=swap');
 $family-sans-serif: "JetBrains Mono", sans-serif;
 $family-primary:$family-sans-serif;
-$body-background-color: $black-ter;
-$primary: #2e3d79;
-$primary-dark: #3c50a0;
-$content-blockquote-background-color: $primary-dark;
-$navbar-dropdown-background-color: #3c50a0;
-$info: #f27de8;
+$black: #1a1a1a;
+$body-background-color: $black;
 $text: $white;
+$primary: #618ded;
+$primary-dark: darken($primary, 40%);
+$info: #f685fc;
+$box-background-color: lighten($black, 3%);
+$footer-background-color: $black;
+$footer-padding: 1rem 10rem 1rem;
+$navbar-background-color: $black;
+$navbar-tab-active-border-bottom-color: #f685fc;
+$navbar-tab-hover-border-bottom-color: #f685fc;
+$navbar-padding-horizontal: 10rem;
 
-.glow_blue {
-    animation: glowBlue 1s infinite;
+.glowBlue {
+    color: #fff;
+    text-shadow:
+        0 0 0.033em #fff,
+        0 0 0.08em #fff,
+        0 0 0.1em #618ded,
+        0 0 0.2em #618ded,
+        0 0 0.3em #618ded,
+        0 0 1em #618ded,
+        0 0 1.5em #618ded;
 }
 
-.glow_pink {
-    animation: glowPink 1s infinite;
-}
-
-@keyframes glowBlue {
-    from {
-        text-shadow: 0 0 10px #618ded, 0 0 20px #618ded, 0 0 30px #618ded, 0 0 40px #618ded, 0 0 50px #618ded, 0 0 60px #618ded, 0 0 70px #618ded;
-    }
-    to {
-        text-shadow: 0 0 10px #618ded, 0 0 20px #618ded, 0 0 30px #618ded, 0 0 40px #618ded, 0 0 50px #618ded, 0 0 60px #618ded, 0 0 70px #618ded;
-    }
-}
-
-@keyframes glowPink {
-    from {
-        text-shadow: 0 0 10px #f685fc, 0 0 20px #f685fc, 0 0 30px #f685fc, 0 0 40px #f685fc;
-    }
-    to {
-        text-shadow: 0 0 10px #f685fc, 0 0 20px #f685fc, 0 0 30px #f685fc, 0 0 40px #f685fc;
-    }
+.glowPink {
+    color: #fff;
+    text-shadow:
+        0 0 0.033em #fff,
+        0 0 0.08em #fff,
+        0 0 0.1em #f685fc,
+        0 0 0.2em #f685fc,
+        0 0 0.3em #f685fc,
+        0 0 1em #f685fc,
+        0 0 1.5em #f685fc;
 }
 
 @import "./node_modules/bulma/bulma.sass";

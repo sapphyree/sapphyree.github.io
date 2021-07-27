@@ -5,14 +5,11 @@ import "../styles/global.scss"
 export default function AboutPage () {
   return (
     <Full>
-     <div className="columns">
-       <div className="column">
-         <div className="box has-background-primary">
-             <h1 className="title is-5">About</h1>
-             This site was made by me using Bulma, Gatsby and Github Pages.
-         </div>
-       </div>
-     </div>
-   </Full>
+      <div className="content">
+        <h1 className="title has-text-white"><span className="glowPink">About</span></h1>
+        <p>This website was made by me through utilisation of Gatsby, Bulma and Github Pages.</p>
+      </div>
+      <section className="section is-large"></section>
+    </Full>
   )
 }

@@ -28,7 +28,7 @@ export default function Nav() {
         <NavBar>
           <NavBrand title={display}></NavBrand>
           <NavMenu>
-            <NavStart items={items}></NavStart>
+            <NavEnd items={items}></NavEnd>
           </NavMenu>
         </NavBar>
       )
@@ -36,7 +36,7 @@ export default function Nav() {
 
 function NavBar ({ children }) {
     return (
-        <div className="navbar is-primary">
+        <div className="navbar is-spaced is-transparent">
             {children}
         </div>
     )
@@ -45,8 +45,8 @@ function NavBar ({ children }) {
 function NavBrand ({ title }) {
     return (
         <div className="navbar-brand">
-            <div className="navbar-item is-size-5">
-                <h1><span class="glow_blue">{title.substring(0,1)}</span><span class="glow_pink">{title.substring(1,11)}</span><span class="glow_blue">{title.substring(11,12)}</span></h1>
+            <div className="navbar-item is-size-4">
+                <Link to="/" ><span class="glowBlue">{title.substring(0,1)}</span><span class="glowPink">{title.substring(1,11)}</span><span class="glowBlue">{title.substring(11,12)}</span></Link>
             </div>
         </div>
     )
@@ -54,26 +54,27 @@ function NavBrand ({ title }) {
 
 function NavMenu ({ children }) {
     return (
-        <div className="navbar-menu is-active is-primary">{children}</div>
+        <div className="navbar-menu is-active is-transparent">{children}</div>
     )
 }
 
-function NavStart ({ items }) {
+function NavEnd ({ items }) {
     return (
-        <div className="navbar-start">
+        <div className="navbar-end">
             {items.map((item, index) => {
                 if (item.link[0] === "/") {
                     return (
                         <Link
                             to={item.link}
-                            className="navbar-item"
+                            className="navbar-item is-tab is-size-5"
+                            activeClassName="is-active"
                         >
-                            {item.name}
+                            <span class="glowBlue">{item.name}</span>
                         </Link>
                     )
                 } else {
                     return (
-                        <a href={item.link} className="navbar-item">{item.name}</a>
+                        <a href={item.link} className="navbar-item is-size-5"><span class="glowBlue">{item.name}</span></a>
                     )
                 }
             })}

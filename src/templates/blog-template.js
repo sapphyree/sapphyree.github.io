@@ -7,9 +7,9 @@ export default function BlogPost({ data }) {
   return (
     <Full>
       <div className="columns">
-      <div className="column has-background-primary is-half">
+      <div className="column is-half">
           <div className="content">
-            <h1 className="title">{post.frontmatter.title}</h1>
+            <h1 className="title has-text-white">{post.frontmatter.title}</h1>
             <div dangerouslySetInnerHTML={{ __html: post.html }}></div>
           </div>
       </div>
