@@ -1,6 +1,5 @@
 import React from "react"
 import { Link, graphql, useStaticQuery } from "gatsby"
-import { string } from "prop-types"
 import clickToggle from "../hooks/clickToggle"
 
 export default function Nav() {
