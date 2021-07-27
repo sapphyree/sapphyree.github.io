@@ -1,8 +1,10 @@
 import React from "react"
 import { Link, graphql, useStaticQuery } from "gatsby"
 import { string } from "prop-types"
+import clickToggle from "../hooks/clickToggle"
 
 export default function Nav() {
+    const [ active, handleActive] = clickToggle();
 
     const data = useStaticQuery(graphql`
     query {
@@ -26,8 +28,8 @@ export default function Nav() {
 
     return (
         <NavBar>
-          <NavBrand title={display}></NavBrand>
-          <NavMenu>
+          <NavBrand title={display} active={active} onToggle={handleActive}></NavBrand>
+          <NavMenu active={active}>
             <NavEnd items={items}></NavEnd>
           </NavMenu>
         </NavBar>
@@ -42,19 +44,24 @@ function NavBar ({ children }) {
     )
 }
 
-function NavBrand ({ title }) {
+function NavBrand ({ title, active, onToggle }) {
     return (
         <div className="navbar-brand">
             <div className="navbar-item is-size-4">
                 <Link to="/" ><span class="glowBlue">{title.substring(0,1)}</span><span class="glowPink">{title.substring(1,11)}</span><span class="glowBlue">{title.substring(11,12)}</span></Link>
             </div>
+            <button className={`navbar-burger ${active ? "is-active" : ""}`} onClick={onToggle}>
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
         </div>
     )
 }
 
-function NavMenu ({ children }) {
+function NavMenu ({ children, active }) {
     return (
-        <div className="navbar-menu is-active is-transparent">{children}</div>
+        <div className={`navbar-menu ${active ? "is-active" : ""}`}>{children}</div>
     )
 }
 
@@ -81,8 +88,6 @@ function NavEnd ({ items }) {
         </div>
     )
 }
-
-
 
 
 

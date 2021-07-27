@@ -5,8 +5,6 @@ import { MdEmail } from "react-icons/md";
 
 
 export default function Socials() {
-    let iconStyles = { color: "white" };
-
     return (
         <nav className="level is-mobile">
             <div className="level-left">
