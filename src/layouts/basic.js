@@ -1,7 +1,6 @@
 import React from "react"
 import "../styles/global.scss"
 import Nav from "../components/nav"
-import Footer from "../components/footer"
 
 export default function Full({ children }) {
   return (

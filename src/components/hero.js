@@ -2,7 +2,6 @@ import { useStaticQuery, graphql } from "gatsby"
 import React from "react"
 import Nav from "../components/nav"
 import Socials from "../components/socials"
-import Footer from "./footer"
 
 export default function Hero() {
     const data = useStaticQuery(graphql`
