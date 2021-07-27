@@ -14,7 +14,7 @@ export default function Blog ({data}) {
                             <h1 className="title has-text-white is-4">{node.frontmatter.title}{" "}</h1>
                             <h2 className="subtitle has-text-white is-6">{node.frontmatter.date}</h2>
                         </Link>
-                        <p>{node.excerpt}</p>
+                        <p>{node.frontmatter.description}</p>
                     </div>
                 ))}
             </div>
@@ -32,12 +32,12 @@ export const query = graphql`
           id
           frontmatter {
             title
-            date(formatString: "YYYY-MM-DD")
+            date(formatString: "YYYY-MM-DD // DD MMMM YYYY")
+            description
           }
           fields {
             slug
           }
-          excerpt
         }
       }
     }

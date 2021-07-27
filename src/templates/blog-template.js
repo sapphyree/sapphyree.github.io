@@ -9,8 +9,9 @@ export default function BlogPost({ data }) {
       <div className="columns">
       <div className="column">
           <div className="content">
-            <h1 className="title has-text-white"><span className="glowPink">{post.frontmatter.title}</span></h1>
-            <div className="box">
+            <h1 className="title has-text-white is-3"><span className="glowPink">{post.frontmatter.title}</span></h1>
+            <h1 className="subtitle has-text-white is-5"><span className="glowBlue">{post.frontmatter.date}</span></h1>
+            <div className="box has-text-white">
               <div dangerouslySetInnerHTML={{ __html: post.html }}></div>
             </div>
           </div>
@@ -27,6 +28,7 @@ export const query = graphql`
       html
       frontmatter {
         title
+        date (formatString: "YYYY-MM-DD // DD MMMM YYYY")
       }
     }
   }
