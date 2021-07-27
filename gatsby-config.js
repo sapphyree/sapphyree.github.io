@@ -3,7 +3,7 @@ module.exports = {
     title: `Victoria Tilley`,
     display: "<//Sapphyre>",
     author: `Victoria Tilley`,
-    description: `CS student interested in fullstack development, game development and other neat stuff!`,
+    description: `CS student interested in fullstack development, game development, and other neat stuff!`,
     social: {
       twitter: `ssapphyree`,
       instagram: `ssapphyree`,
