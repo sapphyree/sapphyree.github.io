@@ -7,10 +7,12 @@ export default function BlogPost({ data }) {
   return (
     <Full>
       <div className="columns">
-      <div className="column is-half">
+      <div className="column">
           <div className="content">
             <h1 className="title has-text-white"><span className="glowPink">{post.frontmatter.title}</span></h1>
-            <div dangerouslySetInnerHTML={{ __html: post.html }}></div>
+            <div className="box">
+              <div dangerouslySetInnerHTML={{ __html: post.html }}></div>
+            </div>
           </div>
       </div>
       </div>
